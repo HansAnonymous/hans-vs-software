@@ -4,8 +4,8 @@ import pyscreenshot as ImageGrab
 import imutils
 
 scale = 0.7 #thx wito
-debug = False
-grid = [[None, None, None, None], [None, None, None], [None, None, None]]
+debug = True
+grid = [[None, None, None], [None, None, None], [None, None, None]]
 
 def main():
 	# take screenshot
@@ -41,5 +41,9 @@ def main():
 			if cv2.waitKey() & 0xFF == ord('q'):
 				cv2.destroyAllWindows()
 
-		print(grid.count(None))
+		count = 0
+		for y in range(3):
+			count += grid[y].count(None)
+
+		print(count)
 main()

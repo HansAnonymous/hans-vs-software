@@ -14,7 +14,7 @@ Year: 2017
 License: GNU GENERAL PUBLIC LICENSE (GPL)
 """
 
-HUMAN = -1
+HUMAN = -
 COMP = +1
 board = [
     [0, 0, 0],
